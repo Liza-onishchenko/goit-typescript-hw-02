@@ -34,3 +34,6 @@
 input:hover {
   border-color: #646cff;
 }
+.searchBtn svg {
+  font-size: 1.5rem; /* Налаштування розміру іконки */
+}

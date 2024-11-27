@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FC } from "react";
 import toast from "react-hot-toast";
 import css from "./SearchBar.module.css";
+import SearchIcon from "@mui/icons-material/Search";
 
 interface SearchBarProps {
   onSubmit: (query: string) => void;
@@ -31,9 +32,13 @@ const SearchBar: FC<SearchBarProps> = ({ onSubmit }) => {
 
   return (
     <header className={css.searchBar}>
-      <form onSubmit={handleSubmit} className={css.searchForm}>
+      <form
+        onSubmit={handleSubmit}
+        className={css.searchForm}
+        aria-label="Search"
+      >
         <button type="submit" className={css.searchBtn}>
-          🔎
+          <SearchIcon />
         </button>
         <input
           type="text"
